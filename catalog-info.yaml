@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: BGPruebaDotNetPrueba
+  description: PruebaServicio1
+  annotations:
+    github.com/project-slug: pechever/pecheverDotNetTemplate
+spec:
+  type: service
+  lifecycle: experimental
+  owner: 
+  system: examples
+  providesApis:
+    - BGPruebaDotNetPrueba-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: BGPruebaDotNetPrueba-api
+  description: API for BGPruebaDotNetPrueba
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: 
+  system: examples
+  definition:
+    $text: https://raw.githubusercontent.com/pechever/pecheverDotNetTemplate/main/openapi.yaml
